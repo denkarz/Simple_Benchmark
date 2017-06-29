@@ -1,0 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package com.denkarz.benchmarktest.Start;
+import com.denkarz.benchmarktest.GUI.MainWindow;
+/**
+ *
+ * @author Denis
+ * @e-mail karzdenis@gmail.com
+ * @nickname DenKarz
+ */
+public class StartBenchMarkTest {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        MainWindow startTest = new MainWindow();
+    }
+}
