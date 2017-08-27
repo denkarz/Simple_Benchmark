@@ -1,13 +1,15 @@
 package com.denkarz.benchmarktest.entities;
 
-import static com.denkarz.benchmarktest.gui.MainWindow.jBasicTable;
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import javax.imageio.ImageIO;
+
+import static com.denkarz.benchmarktest.gui.MainWindow.jBasicTable;
 
 /**
  * Implementation of I/O test.
+ *
  * @author Karzykin Denis
  */
 public final class ReadWriteJPEG extends javax.swing.JPanel {
@@ -23,16 +25,16 @@ public final class ReadWriteJPEG extends javax.swing.JPanel {
      * Location of JPEG files for writing.
      */
     private File[] outputFile = {
-        new File("src//resources///pics//write//0W.jpg"),
-        new File("src//resources///pics//write//1W.jpg"),
-        new File("src//resources///pics//write//2W.jpg"),
-        new File("src//resources///pics//write//3W.jpg"),
-        new File("src//resources///pics//write//4W.jpg"),
-        new File("src//resources///pics//write//5W.jpg"),
-        new File("src//resources///pics//write//6W.jpg"),
-        new File("src//resources///pics//write//7W.jpg"),
-        new File("src//resources///pics//write//8W.jpg"),
-        new File("src//resources///pics//write//9W.jpg")
+            new File("src//resources///pics//write//0W.jpg"),
+            new File("src//resources///pics//write//1W.jpg"),
+            new File("src//resources///pics//write//2W.jpg"),
+            new File("src//resources///pics//write//3W.jpg"),
+            new File("src//resources///pics//write//4W.jpg"),
+            new File("src//resources///pics//write//5W.jpg"),
+            new File("src//resources///pics//write//6W.jpg"),
+            new File("src//resources///pics//write//7W.jpg"),
+            new File("src//resources///pics//write//8W.jpg"),
+            new File("src//resources///pics//write//9W.jpg")
     };
     /**
      * Location of JPEG files for reading.
@@ -49,6 +51,7 @@ public final class ReadWriteJPEG extends javax.swing.JPanel {
             "src//resources///pics//read//8.jpg",
             "src//resources///pics//read//9.jpg"
     };
+
     /**
      * Read JPEG files.
      */
@@ -69,21 +72,24 @@ public final class ReadWriteJPEG extends javax.swing.JPanel {
             jBasicTable.setValueAt(getTimeoutRead() + getTimeoutWrite(), 2, 3);
         } catch (IOException e) {
             System.err.println("IOError");
-            }
+        }
     }
 
     /**
      * Get total timeout.
+     *
      * @return time in milliseconds
      */
-    private long getTimeoutRead(){
+    private long getTimeoutRead() {
         return finalTimeoutRead;
     }
+
     /**
      * Get JPEG write timeout.
+     *
      * @return time in milliseconds
      */
-    private long getTimeoutWrite(){
+    private long getTimeoutWrite() {
         return finalTimeoutWrite;
     }
 }

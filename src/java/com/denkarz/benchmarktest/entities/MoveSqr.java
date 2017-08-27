@@ -1,13 +1,16 @@
 package com.denkarz.benchmarktest.entities;
 
 import com.denkarz.benchmarktest.utilClasses.PropertyReader;
+
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
+
 import static com.denkarz.benchmarktest.gui.MainWindow.content;
 import static com.denkarz.benchmarktest.gui.MainWindow.jBasicTable;
-import java.awt.Graphics2D;
-import java.awt.geom.Rectangle2D;
 
 /**
  * Implementation of GPU test.
+ *
  * @author Karzykin Denis
  */
 public final class MoveSqr extends javax.swing.JPanel implements java.awt.event.ActionListener {
@@ -23,7 +26,7 @@ public final class MoveSqr extends javax.swing.JPanel implements java.awt.event.
     /**
      * Timer.
      */
-    private javax.swing.Timer timer = new javax.swing.Timer (50, this);
+    private javax.swing.Timer timer = new javax.swing.Timer(50, this);
     /**
      * Total time value.
      */
@@ -34,10 +37,11 @@ public final class MoveSqr extends javax.swing.JPanel implements java.awt.event.
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         Rectangle2D square = new Rectangle2D.Double(180, yPosition, 90, 90);
-        g2d.setColor(new java.awt.Color (241, 116, 2));
+        g2d.setColor(new java.awt.Color(241, 116, 2));
         g2d.fill(square);
         timer.start();
     }
+
     /**
      * Move square 3 times.
      */
@@ -64,13 +68,16 @@ public final class MoveSqr extends javax.swing.JPanel implements java.awt.event.
             this.copyArray();
         }
     }
+
     /**
      * Get timeout.
+     *
      * @return time in milliseconds
      */
     private long getTimeout() {
         return timeout;
     }
+
     /**
      * Coping array of data.
      */
