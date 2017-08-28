@@ -1,7 +1,6 @@
 # Simple CPU/GPU/IO benchmark
 
-The Simple Benchmark is the program that tests your computer performance. There are 3 basic tests in it. Time (in milliseconds) is a value of performance in all 3 tests
-UI is based on Swing.
+The Simple Benchmark is the program that tests your computer performance. There are 3 basic tests in it. Time (in milliseconds) is a value of performance in all 3 tests. UI is based on Swing.
 
 ### Features
 
